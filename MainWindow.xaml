@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InterfaceGyakorlo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Streaming Szolgáltató"
+        Height="450"
+        Width="800"
+        MinHeight="400"
+        MinWidth="600">
+<Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Streaming Szolgáltató"
+                       FontSize="26"
+                       FontWeight="Bold"/>
+
+            <TextBlock Text="Filmek és sorozatok katalógusa"
+                       FontSize="14"
+                       Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <ListBox x:Name="ContentList"
+                 Grid.Row="1"
+                 FontSize="15"
+                 Padding="8"/>
+
+        <StackPanel Grid.Row="2" Margin="0,15,0,0">
+            <Button Content="Leghosszabb tartalom keresése"
+                    Height="38"
+                    Click="FindLongest_Click"/>
+
+            <TextBlock x:Name="LongestText"
+                       Text="Válassz egy tartalmat, vagy keresd meg a leghosszabbat!"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       Margin="0,12,0,0"/>
+        </StackPanel>
     </Grid>
 </Window>
